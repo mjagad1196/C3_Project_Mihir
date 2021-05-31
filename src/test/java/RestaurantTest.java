@@ -77,11 +77,10 @@ class RestaurantTest {
 
         List<String> itemsList = new ArrayList<>();
         itemsList.add("Sweet corn soup");
-        itemsList.add("Vegetable lasagne");
 
         int orderTotal = restaurant.getOrderTotal(itemsList);
 
-        assertEquals(388, orderTotal);
+        assertEquals(119, orderTotal);
     }
 
     @Test
