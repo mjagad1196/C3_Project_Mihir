@@ -71,4 +71,27 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>ITEM TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void return_total_order_value_for_selected_items() {
+
+        List<String> itemsList = new ArrayList<>();
+        itemsList.add("Sweet corn soup");
+        itemsList.add("Vegetable lasagne");
+
+        int orderTotal = restaurant.getOrderTotal(itemsList);
+
+        assertEquals(388, orderTotal);
+    }
+
+    @Test
+    public void return_total_order_value_for_no_selected_items() {
+
+        List<String> itemsList = new ArrayList<>();
+
+        int orderTotal = restaurant.getOrderTotal(itemsList);
+
+        assertEquals(0, orderTotal);
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<ITEM TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
